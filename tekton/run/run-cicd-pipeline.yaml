@@ -16,7 +16,7 @@ spec:
     - name: pathToYamlFile
       value: "serving/service.yaml"
     - name: imageUrl
-      value: "registry.cn-chengdu.aliyuncs.com/gfandada/tekton-demo"
+      value: "<your-docker-registry>/gfandada/tekton-demo"
     - name: imageTag
       value: "v1.0.0"
   serviceAccountName: pipeline-account
