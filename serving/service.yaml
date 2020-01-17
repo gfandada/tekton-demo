@@ -13,5 +13,8 @@ spec:
     spec:
       containers:
         - image: __IMAGE__
+          env:
+            - name: TARGET
+              value: "gfandada@gmail.com"
       imagePullSecrets:
         - name: image-pull
