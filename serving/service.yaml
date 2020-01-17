@@ -13,3 +13,5 @@ spec:
     spec:
       containers:
         - image: __IMAGE__
+      imagePullSecrets:
+        - name: image-pull

@@ -6,6 +6,7 @@ metadata:
   namespace: gfandada
 secrets:
   - name: image-secret
+    namespace: gfandada
 
 ---
 
@@ -24,6 +25,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: pipeline-role
+  namespace: gfandada
 rules:
   - apiGroups: ["serving.knative.dev"]
     resources: ["services"]
@@ -35,6 +37,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: pipeline-role-binding
+  namespace: gfandada
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
