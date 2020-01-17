@@ -8,3 +8,4 @@
     ## 先配置镜像仓库的认证信息
     kubectl apply -f tekton/image-secret.yaml
     kubectl apply -f tekton/pipeline-sa.yaml
+    kubectl create -f tekton/run/
