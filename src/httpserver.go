@@ -1,5 +1,5 @@
 /*
-Copyright 2019 fanlin@oppo.com.
+Copyright 2019 gfandada@gmail.com.
 */
 
 package main
