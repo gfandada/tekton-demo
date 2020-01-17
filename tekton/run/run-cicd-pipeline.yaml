@@ -16,7 +16,8 @@ spec:
     - name: pathToYamlFile
       value: "serving/service.yaml"
     - name: imageUrl
-      value: "registry.cn-chengdu.aliyuncs.com/gfandada/test"
+      value: "registry.cn-chengdu.aliyuncs.com/gfandada/tekton-demo"
     - name: imageTag
-      value: "v2.0.0"
-  serviceAccount: pipeline-account
+      value: "v1.0.0"
+  serviceAccountName: pipeline-account
+
