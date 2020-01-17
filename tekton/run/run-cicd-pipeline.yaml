@@ -1,0 +1,22 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  generateName: tekton-demo-
+  namespace: gfandada
+spec:
+  pipelineRef:
+    name: cicd-pipeline
+  resources:
+    - name: git-source
+      resourceRef:
+        name: git-resource
+  params:
+    - name: pathToContext
+      value: "src"
+    - name: pathToYamlFile
+      value: "serving/service.yaml"
+    - name: imageUrl
+      value: "registry.cn-chengdu.aliyuncs.com/gfandada/test"
+    - name: imageTag
+      value: "v2.0.0"
+  serviceAccount: pipeline-account

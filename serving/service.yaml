@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: tekton-helloworld-go
+  namespace: gfandada
+spec:
+  template:
+    metadata:
+      labels:
+        app: httpserver
+      annotations:
+        autoscaling.knative.dev/target: "10"
+    spec:
+      containers:
+        - image: __IMAGE__
