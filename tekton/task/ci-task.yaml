@@ -22,13 +22,14 @@ spec:
         default: "latest"
   steps:
     - name: build-and-push
-      image: registry.cn-hangzhou.aliyuncs.com/knative-sample/kaniko-project-executor:v0.10.0
+      image: gcr.io/kaniko-project/executor:v0.15.0
       command:
         - /kaniko/executor
       args:
         - --dockerfile=$(inputs.params.pathToDockerFile)
         - --destination=$(inputs.params.imageUrl):$(inputs.params.imageTag)
         - --context=/workspace/git-source/$(inputs.params.pathToContext)
+        - --cache=true
       env:
         - name: DOCKER_CONFIG
           value: /builder/home/.docker
